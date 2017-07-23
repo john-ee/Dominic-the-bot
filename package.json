@@ -1,0 +1,20 @@
+{
+  "name": "dominic-the-bot",
+  "version": "1.0.0",
+  "description": "Discord Bot which interacts with IoT devices",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "domotic",
+    "IoT",
+    "bot",
+    "discord"
+  ],
+  "author": "JohnNathan Hill",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.1.0"
+  }
+}
