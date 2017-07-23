@@ -1,8 +1,20 @@
-const Discord = require('discord.js')
-const bot = new Discord.Client()
+const Discord = require('discord.js');
+const client = new Discord.Client();
+const config = require("./config.json");
 
-bot.on('ready', function () {
-  console.log("Je suis connecté !")
-})
+client.on('ready', () => {
+  console.log('I am ready!');
+});
 
-bot.login('TOKEN')
+client.on('message', message => {
+  if(message.content.indexOf(config.prefix) !== 0) return;
+
+  const args = message.content.split(/\s+/g);
+  const command = args.shift().slice(config.prefix.length).toLowerCase();
+
+  if (command === 'ping') {
+    message.reply('pong');
+  }
+});
+
+client.login(config.token);
